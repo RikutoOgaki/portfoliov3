@@ -1,9 +1,16 @@
 'use client'
+import { ReactNode } from "react"
 
-export default function Flame() {
+type Props = {
+  children: ReactNode
+}
+
+export default function Flame({ children }: Props) {
   return (
     <>
-      <div></div>
+      <div>
+        {children}
+      </div>
     </>
   )
 }
