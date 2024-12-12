@@ -1,5 +1,6 @@
 'use client'
 import { ReactNode } from "react"
+import style from '@/styles/components/template/flame.module.css'
 
 type Props = {
   children: ReactNode
@@ -8,7 +9,7 @@ type Props = {
 export default function Flame({ children }: Props) {
   return (
     <>
-      <div>
+      <div className={style.flameWrap}>
         {children}
       </div>
     </>
