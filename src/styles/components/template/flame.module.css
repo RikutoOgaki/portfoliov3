@@ -1,5 +1,7 @@
 .flameWrap{
   width: 100%;
   height: 2000px;
-  padding: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
