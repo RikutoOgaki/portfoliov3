@@ -14,21 +14,24 @@ export default function About() {
         <>
             <div className={styles.aboutWrap}>
                 <div className={styles.aboutGridBox}>
-                    <div>
+                    <div className={styles.myPhotoContent}>
                         <figure>
                             <img src={data.myPhoto} alt="自分の写真" />
                         </figure>
                     </div>{/* 写真 */}
-                    <div>
+                    <div className={styles.myNameContent}>
                         <p>{data.myRuby}</p>
                         <p>{data.myName}</p>
+                        <p>{data.mySchool}</p>
                     </div>{/* 名前などの細かい情報 */}
-                    <div>
+                    <div className={styles.myInportantContent}>
                         <p>{data.myInportant}</p>
                         <p>{data.myInportantReason}</p>
                     </div>{/* 自身が大切にしていること */}
-                    <div>
-                        {data.myCareer}
+                    <div className={styles.myCareerContent}>
+                        {data.myCareer.map((v, idx) =>
+                            <p key={idx}>{v}</p>
+                        )}
                     </div>{/* 経歴 */}
                 </div>
             </div>
